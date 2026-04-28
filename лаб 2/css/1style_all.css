@@ -1,0 +1,143 @@
+/*html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Comic Sans MS", sans-serif;
+  background-color: #121212;
+  color: #bdbdbd;
+  display: grid;
+  grid-template-columns: 1.5fr 97fr 1.5fr;
+  grid-template-rows: 9vh 100vh 50vh 150vh 75vh 20vh[information];
+  grid-template-areas:
+    "menu-bar  menu-bar  menu-bar"
+    "main-section  main-section  main-section"
+    "c1  get-started c3"
+    "d1  ex  d3"
+    "e1  enciclopedia  f3"
+    "information  information information";
+}*/
+/*
+header {
+  display: grid;
+}
+*/
+/*
+.menu_bar {
+  grid-area: menu-bar;
+  grid-template-columns: 0.5% 12% 12.5% 25% 12.5% 37% 0.5%;
+  grid-template-areas: ". logo . dropdown-menu . buttons .";
+  background-color: #1e1e1e;
+  z-index: 100;
+  padding: 10px 20px;
+}
+
+
+.nav_container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  grid-area: logo;
+  font-family: "Comic Sans Ms", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1e1e1e;
+  text-decoration: none;
+  cursor: default;
+}
+
+.nav_links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links li {
+  position: relative;
+}
+
+.nav_links a {
+  grid-area: dropdown-menu;
+  color: #bdbdbd;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1e1e1e;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  border-radius: 6px;
+}
+
+.dropdown_menu li a {
+  padding: 10px 20px;
+  color: #bdbdbd;
+}
+
+.dropdown_menu li a:hover {
+  background-color: #333;
+  color: #bdbdbd;
+  transition: 0.6s;
+}
+
+.dropdown:hover .dropdown_menu {
+  display: block;
+}
+
+.nav_buttons {
+  gap: 10px;
+}
+
+.button_menu {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #bdbdbd;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.6s;
+}
+
+.button_menu:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  grid-area: information;
+  background-color: #1e1e1e;
+  color: #bdbdbd;
+  padding: 20px;
+
+  min-height: 20vh;
+}
+
+.information ul {
+  list-style: none;
+  padding: 0;
+}
+
+.information a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+.information a:hover {
+  text-decoration: underline;
+}
+  */

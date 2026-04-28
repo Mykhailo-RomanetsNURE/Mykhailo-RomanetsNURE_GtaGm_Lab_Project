@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт для публікації фотографій">
+  <meta name="keywords" content="FirstFrame, публікація фотографій, головна сторінка">
+  <style>
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #dbdbdb;
+      text-shadow: 1px 1px 0px #101010bd;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style_all.css">
+  <link rel="stylesheet" href="css/main_page_style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__div-progres-bar">
+      <div class="div-progres-bar__progress-bar"></div>
+    </div>
+    <nav class="header__menu-bar">
+      <a class="menu-bar__logo" href="search_page.html">FirstShot</a>
+      <ul class="menu-bar__dropdown-list">
+        <li class="dropdown-list__list-element">
+          <a class="list-element__open-list-button" href="#">Структура ▼</a>
+          <ul class="list-element__opening-list">
+            <li class="opening-list__elements"><a class="opening-list__list-button" href="#main_saction">О сторінці</a>
+            </li>
+            <li class="opening-list__elements"><a class="opening-list__list-button" href="#get_start">Як розпочати</a>
+            </li>
+            <li class="opening-list__elements"><a class="opening-list__list-button" href="#ex">Приклади фото</a></li>
+            <li class="opening-list__elements"><a class="opening-list__list-button"
+                href="#contact_information">Контактна інформація</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu-bar__button-in-menu">
+        <a class="button-in-menu__button" id="b1" href="search_page.html">Знайти роботи</a>
+        <a class="button-in-menu__button" id="b2" href="search_profile.html">Знайти профіль</a>
+        <a class="button-in-menu__button" id="b3" href="autoriztion_page.html">Вхід/Реєстрація</a>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="main__section-right-menu">
+      <aside class="section-right-menu__right-menu" id="sidebar">
+        <a class="right-menu__button" href="#main_saction">О сторінці</a><br>
+        <a class="right-menu__button" href="#get_start">Як розпочати</a><br>
+        <a class="right-menu__button" href="#ex">Приклади фото</a><br>
+        <a class="right-menu__button" href="#contact_information">Контактна інформація</a><br>
+      </aside>
+      <button class="section-right-menu__open-right-menu-button">☰</button>
+    </section>
+    <section class="main__start-section" id="main_saction">
+      <h1 id="start-section__logo">FirstShot</h1>
+      <h2 class="start-section__text-start_section">це платформа для розміщення своїх перших кадрів</h2>
+      <h3 class="start-section__text-start_section">Роботи не мусять бути ідеальними щоб бути гарними</h3>
+      <h4 class="start-section__text-start_section">Непотрібно підстраюватись під смаки інших</h4>
+      <h5 class="start-section__text-start_section">Головне щоб фотографії подобались собі</h5>
+      <h6 class="start-section__text-start_section">Але здорова критика ніколи не є зайвою</h6>
+    </section>
+    <section class="main__get-start" id="get_start">
+      <h3 class="get-start__heading">Як розпочати?</h3>
+      <table class="get-start__start-table">
+        <tbody class="start-table__table-heading">
+          <tr class="table-heading__heading-row">
+            <td class="heading-row__heading-text">Як опублікувати фотографії?</td>
+            <td class="heading-row__heading-text">Як знайти фотографії?</td>
+          </tr>
+        <tbody class="start-table__table-body">
+          <tr class="table-body__body-rows">
+            <td class="body-rows__start-instructions">
+              <ol class="start-instructions__start-list" type="1">
+                <li class="start-list__list-item">Зареєструватись(e-mail підєднується потім)</li>
+                <li class="start-list__list-item">Прикрепити фотографію, заповнити інформацію (за бажанням)</li>
+                <li class="start-list__list-item">Натиснути на кнопку"Гтово!"</li>
+              </ol>
+              Все готово!
+              <br>
+              <a href="autoriztion_page.html">
+                <button class="start-instructions__button">Реєстрація</button>
+              </a>
+            </td>
+            <td class="body-rows__search-instructions">
+              <ol class="search-instructions__search-list" type="1">
+                <li class="search-list__list-item">Натиснути на кнопку "Знайти роботи" </li>
+                <li class="search-list__list-item">Обрати теги або зкористатися пошуком</li>
+                <li class="search-list__list-item">Обрати тип перегляду</li>
+              </ol>
+              Можна дивитися усі достопні роботи
+              <br>
+              <a href="search_page.html">
+                <button class="search-instructions__button">Знайти Роботи</button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="main__example" id="ex">
+      <table class="example__table-card">
+        <tbody>
+          <tr class="table-card__row">
+            <td class="table-card__cell">
+              <article class="table-card__card-example">
+                <h2 class="card-example__heading">Місцевість</h2>
+                <img class="card-example__photo" src="img/IMG_20250727_192023.webp">
+                <p>
+                <ol class="card-example__description" type="1">
+                  <li class="description__heading">ідеї<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Приклад Українського села в музеї Пирогова </li>
+                    <li class="list__text">Пейзаж</li>
+                    <li class="list__text">Літо</li>
+                  </ul>
+                  <li class="description__heading">обробка<br>
+                    <ul class="description__list">
+                      <li class="list__text">Поєднання фотографій телефоном</li>
+                      <li class="list__text">Легка обробка вручну</li>
+                      <li class="list__text">кадрування</li>
+                    </ul>
+                  <li class="description__heading">Додаткова інформація<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Ширина 4000</li>
+                    <li class="list__text">Висота 3000</li>
+                    <li class="list__text">Телефон</li>
+                  </ul>
+                </ol>
+                </p>
+              </article>
+            </td>
+            <td class="table-card__cell">
+              <article class="table-card__card-example">
+                <h2 class="card-example__heading">Ніч</h2>
+                <img class="card-example__photo" src="img/IMG_20241109_213459.webp">
+                <p>
+                <ol class="card-example__description" type="1">
+                  <li class="description__heading">ідеї<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Нічне місто</li>
+                    <li class="list__text">Незвичайний ефект</li>
+                    <li class="list__text">Випадкове фото</li>
+                  </ul>
+                  <li class="description__heading">обробка<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Оброблена камерою автоматично </li>
+                    <li class="list__text">Корекція кольорів</li>
+                    <li class="list__text">Кадрування</li>
+                  </ul>
+                  <li class="description__heading">Додаткова інформація<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Висота 3000</li>
+                    <li class="list__text">Ширина 4000</li>
+                    <li class="list__text">Телефон</li>
+                  </ul>
+                </ol>
+                </p>
+              </article>
+            </td>
+          </tr>
+          <tr class="table-card__row">
+            <td class="table-card__cell">
+              <article class="table-card__card-example">
+                <h2 class="card-example__heading">Хмари на закаті</h2>
+                <img class="card-example__photo" src="img/IMG_20250110_161757.webp">
+                <p>
+                <ol class="card-example__description" type="1">
+                  <li class="description__heading">ідеї<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Закат</li>
+                    <li class="list__text">Яскраві кольори</li>
+                    <li class="list__text">Силуєти</li>
+                  </ul>
+                  <li class="description__heading">обробка<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Оброблено камерою</li>
+                    <li class="list__text">Підвищена контрастність та насиченість кольорів</li>
+                    <li class="list__text">Відсутність кадрування</li>
+                  </ul>
+                  <li class="description__heading">Додаткова інформація<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Висота 3000</li>
+                    <li class="list__text">Ширина 4000</li>
+                    <li class="list__text">Телефон</li>
+                  </ul>
+                </ol>
+                </p>
+              </article>
+            </td>
+            <td class="table-card__cell">
+              <article class="table-card__card-example">
+                <h2 class="card-example__heading">Пейзаж</h2>
+                <img class="card-example__photo" src="img/IMG_20250727_191843.webp">
+                <p>
+                <ol class="card-example__description" type="1">
+                  <li class="description__heading">ідеї<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Темні хмари</li>
+                    <li class="list__text">Київ</li>
+                    <li class="list__text">пейзаж</li>
+                  </ul>
+                  <li class="description__heading">обробка<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Програмно збільшена чіткість</li>
+                    <li class="list__text">Збільшена контрастність</li>
+                    <li class="list__text">Обробка камери(автоматична)</li>
+                  </ul>
+                  <li class="description__heading">Додаткова інформація<br></li>
+                  <ul class="description__list">
+                    <li class="list__text">Висота 3000</li>
+                    <li class="list__text">Ширина 4000</li>
+                    <li class="list__text">Телефон</li>
+                  </ul>
+                </ol>
+                </p>
+              </article>
+            </td>
+          </tr>
+        <tbody>
+      </table>
+    </section>
+    <section class="main__enciclopedia" id="enciclopedia">
+      <div class="enciclopedia__subject">
+        <label class="subject__heading subject__heading_iso">iso</label>
+        <div class="subject__content subject__content_iso">Текст...</div>
+        <label class="subject__heading subject__heading_f">Діафрагма f</label>
+        <div class="subject__content subject__content_f">Текст...</div>
+        <label class="subject__heading subject__heading_shutter">Витримка</label>
+        <div class="subject__content subject__content_shutter">Текст...</div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__heading" id="contact_information"><b>Інформація для зв'язку</b></p>
+    <ul class="footer__contact-information" id="contact_information">
+      <li>
+        <a class="contact-information__github-link" href="https://github.com/Mykhailo-RomanetsNURE" target="_blank"
+          rel="noopener">Посилання на GitHub
+        </a>
+      </li>
+      <li>
+        <a class="contact-information__git-link"
+          href="https://github.com/Mykhailo-RomanetsNURE/Mykhailo-RomanetsNURE_GtaGm_Lab_Project.git" target="_blank"
+          rel="noopener">Посилання на git репозиторій</a>
+      </li>
+      <li>
+        За виявлення багів або якщо є ідеї для покращення писати на e-mail:
+        <a class="contact-information__email-link" href="mailto:mykhailo.romanets@nure.ua">
+          <i>mykhailo.romanets@nure.ua</i>
+        </a>
+      </li>
+      <li class="contact-information__tlegram-link">Телеграм: <i>@MikhaiI_R</i></li>
+    </ul>
+  </footer>
+  <script src="js/main_page_js.js"></script>
+</body>
+
+</html>

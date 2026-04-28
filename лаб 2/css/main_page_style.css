@@ -1,0 +1,329 @@
+/*
+-----------------------------------------------------------------------------
+Верхня строчка меню
+-----------------------------------------------------------------------------
+*/
+/* прогрес */
+.header__div-progres-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 3px;
+  background: #2a2731;
+}
+
+.div-progres-bar__progress-bar {
+  height: 3px;
+  background: #ccc;
+  width: 0%;
+  animation: scroll-progress auto linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/*
+-----------------------------------------------------------------------------
+Бокове меню
+-----------------------------------------------------------------------------
+*/
+
+/*бокове меню*/
+.main__section-right-menu {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 250px;
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+/*активація боковго меню*/
+.main__section-right-menu.active {
+  right: 0;
+}
+
+/*кнопки бокового меню*/
+.right-menu__button {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  width: 220px;
+  background-color: #333;
+  color: #bdbdbd;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+/*анімація кнопки бокового меню*/
+.right-menu__button:hover {
+  background-color: #555;
+  transform: scale(1.03);
+  transition: 0.6s;
+}
+
+/*кнопка меню при закритому меню*/
+.section-right-menu__open-right-menu-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  padding: 12px 15px;
+  background-color: #dbdbdbbd;
+  color: #333;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*кнопка меню після відкриття меню*/
+.main__section-right-menu.active+.toggle_btn {
+  right: 300px;
+}
+
+/*
+-----------------------------------------------------------------------------
+Головна секція
+-----------------------------------------------------------------------------
+*/
+/* розміри головна секція головної сторінки*/
+#main__start-section {
+  min-width: 100vh;
+  min-height: 100vh;
+
+  height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/IMG_20260218_193413.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/*логотип на головній сторінці*/
+#start-section__logo {
+  color: #f0f0f0f0;
+  font-family: "Comic Sans MS", cursive;
+  cursor: default;
+  text-shadow: 2px 2px 0px #30303080;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+/*
+-----------------------------------------------------------------------------
+Початок роботи
+-----------------------------------------------------------------------------
+*/
+/*загальні налаштування секції*/
+.main__get-start {
+  min-height: 50vh;
+  padding: 40px 20px;
+  background-color: #181818;
+}
+
+/*налаштування таблиці*/
+.main__get-start__start-table {
+  width: 100%;
+  border-spacing: 20px;
+}
+
+/*налаштування комірок*/
+.body-rows__start-instructions,
+.body-rows__search-instructions {
+  width: 50%;
+  vertical-align: top;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/*заголовки над комірками таблиці*/
+.get-start__heading {
+  text-align: center;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
+/*зміна вигляду нумерованого списку*/
+.start-instructions__start-list,
+.search-instructions__search-list {
+  color: #bdbdbd;
+  padding-left: 20px;
+}
+
+/*зміна вигляду пунктів списку*/
+.start-instructions__start-list,
+.search-instructions__search-list {
+  margin-bottom: 8px;
+}
+
+/*вигляд кнопок у списку*/
+.start-instructions__button,
+.search-instructions__button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #333;
+  color: #bdbdbd;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/*зміна кнопки при наведенні курсора*/
+.start-instructions__button:hover,
+.search-instructions__button:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+
+/*
+-----------------------------------------------------------------------------
+Приклад фотографій
+-----------------------------------------------------------------------------
+*/
+/*загальні налаштування секції*/
+.main__example {
+  min-height: 150vh;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #121212;
+}
+
+/*налаштування таблиці*/
+.example__table-card {
+  margin: 0 auto;
+  width: 100%;
+  border-spacing: 20px;
+}
+
+/*нлаштування рядків таблиці*/
+.table-card__row {
+  margin: 50px 0px;
+  display: flex;
+  gap: 20px;
+}
+
+/*налаштування комірок таблиці*/
+.table-card__cell {
+  width: 50%;
+  vertical-align: top;
+  flex: 1;
+}
+
+/*налаштування карток у таблиці*/
+.table-card__card-example {
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.6s;
+}
+
+/*налаштування заголовка у картках*/
+.card-example__heading {
+  color: #bdbdbd;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*налаштування картинок у картках*/
+.card-example__photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/*нумерований список у картці*/
+.card-example__description {
+  color: #bdbdbd;
+  padding-left: 20px;
+}
+
+/*маркований список у нумерованому списку у картці*/
+.description__list {
+  margin: 5px 0 10px 15px;
+  padding-left: 15px;
+  list-style-type: circle;
+}
+
+/*пункти списку у картці*/
+.list__text {
+  margin-bottom: 5px;
+}
+
+/*елементи нумерованого списку у картці*/
+.description__heading {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*поверненя нормального виду елементам ненумерованих списків*/
+.list__text {
+  font-weight: normal;
+  color: #bdbdbd;
+}
+
+/*
+-----------------------------------------------------------------------------
+Додаткова інформацфя 
+-----------------------------------------------------------------------------
+*/
+.main__enciclopedia {
+  min-height: 75vh;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #121212;
+}
+
+.subject__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.subject__content:hover {
+  max-height: 200px;
+}
+
+.subject__heading_iso:hover~.subject__content_iso {
+  max-height: 200px;
+}
+
+.subject__heading_f:hover~.subject__content_f {
+  max-height: 200px;
+}
+
+.subject__heading_shutter:hover~.subject__content_shutter {
+  max-height: 200px;
+}

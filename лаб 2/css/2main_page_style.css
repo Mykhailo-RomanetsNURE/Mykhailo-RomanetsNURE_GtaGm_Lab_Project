@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background-color: #121212;
+  color: #bdbdbd;
+  display: grid;
+  grid-template-columns: 1.5vh auto 1.5vh;
+  grid-template-rows: 3px 9vh 100vh 50vh 150vh 75vh 20vh[information];
+  grid-template-areas:
+    ".  .  ."
+    "a1  menu-bar  a3"
+    "main-section  main-section  main-section"
+    "c1  get-started c3"
+    "d1  ex  d3"
+    "e1  enciclopedia  f3"
+    "information  information information";
+}
+
+header {
+  display: grid;
+}
+
+main {
+  display: grid;
+}
+
+footer {
+  display: grid;
+}
+
+/*
+-----------------------------------------------------------------------------
+Бокове меню
+-----------------------------------------------------------------------------
+*/
+/*бокове меню*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 250px;
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  transition: 1s;
+}
+
+/*активація боковго меню*/
+.sidebar.active {
+  right: 0;
+}
+
+/*кнопки бокового меню*/
+.sidebar a {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  width: 220px;
+  background-color: #333;
+  color: #bdbdbd;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+/*анімація кнопки бокового меню*/
+.sidebar a:hover {
+  background-color: #555;
+  transform: scale(1.03);
+  transition: 0.6s;
+}
+
+/*кнопка меню при закритому меню*/
+.toggle_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 12px 15px;
+  background-color: #dbdbdbbd;
+  color: #333;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.toggle_btn:hover {
+  transition: 1s;
+  transform: scale(1.2) rotate(360deg);
+}
+
+/*кнопка меню після відкриття меню*/
+.sidebar.active+.toggle_btn {
+  right: 300px;
+}
+
+.sidebar.active+.toggle_btn:hover {
+  transition: 1s;
+  transform: scale(1.2) rotate(-360deg);
+}
+
+/*
+-----------------------------------------------------------------------------
+Верхня строчка меню
+-----------------------------------------------------------------------------
+*/
+/* прогрес */
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 3px;
+  background: #2a2731;
+}
+
+.progress-bar {
+  height: 3px;
+  background: #ccc;
+  width: 0%;
+  animation: scroll-progress auto linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/*стрічка меню*/
+.menu_bar {
+  display: grid;
+  grid-area: menu-bar;
+  grid-template-columns: 0.5% 12.5% 12% 25% 12% 12.5% 12.5% 12.5% 0.5%;
+  grid-template-rows: 100%;
+  grid-template-areas: ". logo . dropdown-menu . button1 button2 button3 .";
+  background-color: #1e1e1e;
+  z-index: 100;
+}
+
+/*контейнер меню*/
+.nav_container {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*лого*/
+.logo {
+  grid-area: logo;
+  font-family: "Comic Sans Ms", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: default;
+  z-index: 150;
+}
+
+/*випадаюче меню*/
+.dropdown {
+  display: grid;
+  grid-area: dropdown-menu;
+  z-index: 150;
+}
+
+.nav_links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links li {
+  position: relative;
+}
+
+.nav_links a {
+  color: #bdbdbd;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1e1e1e;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  border-radius: 6px;
+}
+
+.dropdown_menu li a {
+  padding: 10px 20px;
+  color: #bdbdbd;
+}
+
+.dropdown_menu li a:hover {
+  background-color: #333;
+  color: #bdbdbd;
+  transition: 0.6s;
+}
+
+.dropdown:hover .dropdown_menu {
+  display: block;
+}
+
+/*кнопки в меню*/
+.nav_buttons {
+  display: grid;
+  z-index: 150;
+}
+
+.button_menu {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #bdbdbd;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.6s;
+}
+
+.button_menu:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+
+#b1 {
+  display: grid;
+  grid-area: button1;
+}
+
+#b2 {
+  display: grid;
+  grid-area: button2;
+}
+
+#b3 {
+  display: grid;
+  grid-area: button3;
+}
+
+/*
+-----------------------------------------------------------------------------
+Приклад фотографій
+-----------------------------------------------------------------------------
+*/
+/*загальні налаштування секції*/
+#ex {
+  min-height: 150vh;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #121212;
+}
+
+/*налаштування таблиці*/
+#ex table {
+  margin: 0 auto;
+  width: 100%;
+  border-spacing: 20px;
+}
+
+/*нлаштування рядків таблиці*/
+#ex tr {
+  margin: 50px 0px;
+  display: flex;
+  gap: 20px;
+}
+
+/*налаштування комірок таблиці*/
+#ex td {
+  width: 50%;
+  vertical-align: top;
+  flex: 1;
+}
+
+/*налаштування карток у таблиці*/
+.article_img {
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.6s;
+}
+
+/*налаштування заголовка у картках*/
+.article_img h2 {
+  color: #bdbdbd;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*налаштування картинок у картках*/
+.article_img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/*нумерований список у картці*/
+.article_img ol {
+  color: #bdbdbd;
+  padding-left: 20px;
+}
+
+/*маркований список у нумерованому списку у картці*/
+.article_img ul {
+  margin: 5px 0 10px 15px;
+  padding-left: 15px;
+  list-style-type: circle;
+}
+
+/*пункти списку у картці*/
+.article_img li {
+  margin-bottom: 5px;
+}
+
+/*елементи нумерованого списку у картці*/
+.article_img ol>li {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*поверненя нормального виду елементам ненумерованих списків*/
+.article_img ul li {
+  font-weight: normal;
+  color: #bdbdbd;
+}
+
+/*
+-----------------------------------------------------------------------------
+футер
+-----------------------------------------------------------------------------
+*/
+footer {
+  display: grid;
+  grid-area: information;
+  background-color: #1e1e1e;
+  color: #bdbdbd;
+  padding: 20px;
+
+  min-height: 20vh;
+}
+
+.information ul {
+  list-style: none;
+  padding: 0;
+}
+
+.information a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+.information a:hover {
+  text-decoration: underline;
+}
