@@ -106,7 +106,9 @@
 #main__start-section {
   min-width: 100vh;
   min-height: 100vh;
+}
 
+.main__start-section {
   height: 100vh;
 
   background-image:
