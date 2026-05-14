@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Лабораторна робота 2 Романець Михайло ПЗПІ-25-4 Варіант-18</title>
+  <meta charset="UTF-8">
+  <style>
+    body,
+    html {
+      margin: 0;
+      height: 100%;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      gap: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .nested-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .nested-container .box {
+      flex: none;
+      height: 15%;
+      width: 100%;
+    }
+
+    @media (max-width: 760px) {
+
+      .main-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 100vh;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .nested-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        gap: 10px;
+        height: calc(100% - 80px);
+      }
+
+      .box1 {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+
+      .box2 {
+        flex: 1;
+        order: 3;
+        height: calc(100% - 80px);
+      }
+
+      .box3,
+      .box4 {
+        flex: 1;
+        width: 100%;
+      }
+
+      .nested-container .box {
+        flex: 1;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="box box1" style="background-color: #4a5da9;">Content</div>
+    <div class="box box2" style="background-color: #8e58a4;">Content</div>
+    <div class="nested-container">
+      <div class="box box3" style="background-color: #e39d5b;">Content</div>
+      <div class="box box4" style="background-color: #4ca1d0;">Content</div>
+    </div>
+  </div>
+</body>
+
+</html>
