@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    #tooltip {
+      display: none;
+      position: absolute;
+      background: #1d1d1d;
+      color: #aeaeae;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      z-index: 1000;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: dimgray;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="tooltip-btn">Показати підказку</button>
+  <div id="tooltip">Підказка,з великою кількістью тексту: Реалізуйте спливаючу при натисканні підказку. Підказка сама
+    повинна визначати напрями спливання, щоб не піти за межі екрану. При натисканні на будь-яке місце екрану (крім
+    підказки) вона повинна сховатися.</div>
+</body>
+
+<script>
+  const btn = document.getElementById('tooltip-btn');
+  const tooltip = document.getElementById('tooltip');
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    tooltip.style.display = 'block';
+    const rect = btn.getBoundingClientRect();
+    let left = rect.left;
+    let top = rect.bottom + 5;
+    if (left + tooltip.offsetWidth > window.innerWidth) {
+      left = window.innerWidth - tooltip.offsetWidth - 10;
+    }
+    if (top + tooltip.offsetHeight > window.innerHeight) {
+      top = rect.top - tooltip.offsetHeight - 5;
+    }
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+  });
+
+  document.addEventListener('click', () => {
+    tooltip.style.display = 'none';
+  });
+</script>
+
+</html>

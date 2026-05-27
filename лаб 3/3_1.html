@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    #ad-banner {
+      background: #fff3cd;
+      color: #856404;
+      padding: 15px;
+      border: 1px solid #ffeeba;
+      margin: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="ad-banner">
+    <span>Рекламний текст</span>
+    <button onclick="hideAd()">прибрати</button>
+  </div>
+  <p>1. Нехай із заходу на сторінку показується певний рекламний текст. Поруч з ним зробіть кнопку 'прибрати', після
+    натискання на яку цей рекламний текст не показується цьому користувачеві рівно один день.</p>
+</body>
+
+<script>
+  const adbanner = document.getElementById('ad-banner');
+  const hideaduntil = localStorage.getItem('HideadUntil');
+
+  if (hideaduntil && new Date().getTime() < parseInt(hideaduntil)) {
+    adbanner.style.display = 'none';
+  }
+
+  function hideAd() {
+    const oneDayInMs = /*24 * 60 * 60 **/ 1000;
+    const expireTime = new Date().getTime() + oneDayInMs;
+    localStorage.setItem('HideadUntil', expireTime);
+    adbanner.style.display = 'none';
+  }
+</script>
+
+</html>

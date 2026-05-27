@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: black;
+    }
+
+    p {
+      color: darkgray;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="output"></div>
+
+  <script>
+    function printText(text, size) {
+      const container = document.getElementById('output');
+      const p = document.createElement('p');
+      p.innerText = text;
+      p.style.fontSize = size;
+      container.appendChild(p);
+    }
+    printText("Дуже великий текст", "64px");
+    printText("Текст що має нормальні розміри та добре читається", "24px");
+    printText("Дрібний шрифт що майже не читається :)", "8px");
+  </script>
+</body>
+
+</html>

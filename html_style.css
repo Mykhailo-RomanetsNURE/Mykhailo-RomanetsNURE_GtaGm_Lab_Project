@@ -9,6 +9,7 @@ body {
   color: #bdbdbd;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 a {
@@ -24,5 +25,4 @@ a {
   border-radius: 6px;
   text-align: center;
   margin-top: 20px;
-
 }

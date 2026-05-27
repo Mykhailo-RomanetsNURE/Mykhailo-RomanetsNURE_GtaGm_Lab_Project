@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      display: block;
+      align-items: center;
+    }
+
+    div {
+      align-items: center;
+      padding: 20px;
+      background-color: darkslategray;
+      width: 95%;
+      font-weight: bold;
+      margin: auto;
+    }
+
+    button {
+      margin: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fade-target">
+    Цей блок тексту буде поступово зникати після натискання кнопки:
+    3.1415926535897932384626433832795028841971693993751058209749445
+    923078164062862089986280348253421170679821480865132823066470938
+    446095505822317253594081284811174502841027019385211055596446229
+    489549303819644288109756659334461284756482337867831652712019091
+    45648566923460348610454326648213393607260249141273
+  </div>
+  <br>
+  <button onclick="startFading()">Приховати</button>
+  <br>
+  <button onclick="startAppearing()">Показати</button>
+</body>
+
+<script>
+  function startFading() {
+    const element = document.getElementById('fade-target');
+    let opacity = 1;
+    const timer = setInterval(() => {
+      if (opacity <= 0) {
+        clearInterval(timer);
+        element.style.display = 'none';
+      } else {
+        opacity -= 0.0025;
+        element.style.opacity = opacity;
+      }
+    }, 1);
+  }
+  function startAppearing() {
+    const element = document.getElementById('fade-target');
+    let opacity = 0;
+    element.style.display = 'block';
+    element.style.opacity = opacity;
+    const timer = setInterval(() => {
+      if (opacity >= 1) {
+        clearInterval(timer);
+      } else {
+        opacity += 0.0025;
+        element.style.opacity = opacity;
+      }
+    }, 1);
+  }
+</script>
+
+</html>

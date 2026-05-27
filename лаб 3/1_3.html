@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: black;
+      text-align: center;
+      color: dimgrey;
+    }
+
+    button {
+      background-color: dimgrey;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Сторінка що містить абзаци, це не абзац</h3>
+  <p>Сторінка містить 3 елементу "абзац" це перший.</p>
+  <p>Це вже другий абзац.</p>
+  <p>Це третій абзац.</p>
+  <button onclick="resizeParagraphs('8px')">Змінити розмір абзаців на 8 рх</button>
+  <button onclick="resizeParagraphs('16px')">Змінити розмір абзаців на 16 рх</button>
+  <button onclick="resizeParagraphs('32px')">Змінити розмір абзаців на 32 рх</button>
+  <button onclick="resizeParagraphs('64px')">Змінити розмір абзаців на 64 рх</button>
+</body>
+
+<script>
+  function resizeParagraphs(size) {
+    const paragraphs = document.getElementsByTagName('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].setAttribute('style', 'font-size: ' + size + ';');
+    }
+  }
+</script>
+
+</html>

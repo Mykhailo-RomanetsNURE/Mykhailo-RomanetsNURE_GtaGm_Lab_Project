@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: black;
+    }
+
+    #info-box {
+      color: white;
+      padding: 25px;
+      width: 350px;
+      margin: 200px auto;
+      font-family: sans-serif;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="info-box">
+    <p>Координати миші: X: <span id="posX">0</span>, Y: <span id="posY">0</span></p>
+    <p>Код натиснутої клавіші: <span id="keyCode">ще не натиснуто</span></p>
+  </div>
+</body>
+
+<script>
+  const posX = document.getElementById('posX');
+  const posY = document.getElementById('posY');
+  const keyCode = document.getElementById('keyCode');
+
+  document.addEventListener('mousemove', (e) => {
+    posX.innerText = e.clientX;
+    posY.innerText = e.clientY;
+  });
+  document.addEventListener('keydown', (e) => {
+    keyCode.innerText = e.key + " (код: " + e.code + " )";
+  });
+</script>
+
+</html>

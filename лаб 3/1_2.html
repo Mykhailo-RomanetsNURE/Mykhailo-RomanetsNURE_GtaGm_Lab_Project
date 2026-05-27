@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+      background-color: black;
+    }
+
+    #moving-img {
+      position: absolute;
+      width: 470px;
+      height: 189px;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="moving-img" src="img.png" alt="Moving">
+</body>
+
+<script>
+  const img = document.getElementById('moving-img');
+  setInterval(() => {
+    const maxX = window.innerWidth - img.clientWidth;
+    const maxY = window.innerHeight - img.clientHeight;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    img.style.left = randomX + 'px';
+    img.style.top = randomY + 'px';
+  }, 1000);
+</script>
+
+</html>
