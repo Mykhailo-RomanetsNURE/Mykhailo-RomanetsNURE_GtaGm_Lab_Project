@@ -50,7 +50,7 @@
   }
 
   function hideAd() {
-    const oneDayInMs = /*24 * 60 * 60 **/ 1000;
+    const oneDayInMs = 24 * 60 * 60 * 1000;
     const expireTime = new Date().getTime() + oneDayInMs;
     localStorage.setItem('HideadUntil', expireTime);
     adbanner.style.display = 'none';
